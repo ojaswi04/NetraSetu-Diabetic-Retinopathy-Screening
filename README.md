@@ -124,7 +124,10 @@ backend/
 ├── services/              # iqa, preprocessor, biomarker, model, gradcam, report, simulink, chat
 ├── matlab/                # standalone Simulink telemedicine model
 ├── weights/               # trained YOLO model (sih_dr_best_model.pt)
-└── data/                  # sample dataset registry (CSV)
+├── data/                  # sample dataset registry (CSV)
+├── uploads/               # 109 sample screenings: public APTOS / IDRiD fundus images + synthetic test images
+├── processed/             # pipeline outputs per screening (preprocessed, vessels, lesions, heatmap)
+└── reports/               # example PDF screening reports (placeholder patient details)
 frontend/
 ├── index.html             # landing page and portal
 ├── patient/  doctor/  admin/
@@ -136,7 +139,7 @@ docs/pipeline.jpg          # figure used in this README
 
 ## Data
 
-Developed with public fundus datasets: **APTOS 2019 Blindness Detection** (5-grade labels) and **IDRiD** (Indian population, lesion-level annotations). Datasets are not included in this repository; download them from their official sources.
+Developed with public fundus datasets: **APTOS 2019 Blindness Detection** (5-grade labels) and **IDRiD** (Indian population, lesion-level annotations). The full datasets are not included; download them from their official sources. `backend/uploads/` holds a small set of sample images from these datasets, plus synthetic shapes used to test the quality gate's rejection of non-retinal images.
 
 ---
 
